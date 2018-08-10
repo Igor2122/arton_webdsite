@@ -1,0 +1,93 @@
+
+/*      FONTS & TYPO      */
+
+
+@font-face {
+    font-family: headlines;
+    src: url('../typewriter.ttf');
+}
+
+@font-face {
+    font-family: navfont;
+    src: url('../headline.ttf');
+}
+
+
+/*      LAOUT           */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background: red url('../backgroundImg/brickwall.jpg') no-repeat;
+    background-size: cover;
+}
+
+#main-content {
+    
+}
+
+.left-gate,
+.right-gate {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    transition: transform 1s ease-in 1s;
+}
+
+.left-gate {
+    background: red;    
+    left: 0;
+}
+
+
+.right-gate {
+    background: yellow;
+    right: 0;
+}
+
+.load-gear {
+    transition: transform 1s ease-in;
+    height: 200px;
+    position: absolute;
+    top: 38%;
+    left: -100px;
+}
+
+#store-content {
+    width: 80%;
+    margin: auto;
+    height: 100vh;
+    display: grid;
+    /*grid-row-gap: 40px;*/
+    grid-template-columns: .4fr 1fr;
+    grid-auto-rows: minmax(400px, auto) minmax(400px, auto)  ;
+    grid-template-areas: 
+    "slider slider" 
+    "navigation saleitems"
+}
+
+.main-slider {
+    grid-area: slider;
+    background: pink;
+}
+
+.left-column {
+    grid-area: navigation;
+    background: yellow;
+}
+
+.right-column {
+    grid-area: saleitems;
+    background: red;
+}
+
+.slider {
+    background: white;
+    width: 80%;
+    margin: auto;
+    height: 400px;
+}
